@@ -9,7 +9,11 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://quizmaker-sachin.vercel.app/', // replace with your frontend domain
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Allow credentials if needed
+  }));
 
 // Routes
 app.use('/api/auth', authRoutes);
