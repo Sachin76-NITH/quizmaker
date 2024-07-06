@@ -61,7 +61,7 @@ const QuizForm = () => {
       };
   
       // Send POST request to create quiz
-      await axios.post('http://localhost:5000/api/quizzes/create', quizData, config);
+      await axios.post('https://quizmaker-nu.vercel.app/api/quizzes/create', quizData, config);
       navigate('/quizzes'); // Redirect to quizzes list after creating quiz
     } catch (error) {
       console.error('Error creating quiz:', error);

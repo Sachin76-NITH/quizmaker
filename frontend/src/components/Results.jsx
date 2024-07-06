@@ -11,7 +11,7 @@ const Result = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/quizzes/${quizId}/results`);
+        const response = await axios.get(`https://quizmaker-nu.vercel.app/api/quizzes/${quizId}/results`);
         setResults(response.data.results);
       } catch (error) {
         console.error('Error fetching quiz results:', error);

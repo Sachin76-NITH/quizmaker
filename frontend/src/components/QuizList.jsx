@@ -10,7 +10,7 @@ const QuizList = () => {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/quizzes', {
+        const response = await axios.get('https://quizmaker-nu.vercel.app/api/quizzes', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

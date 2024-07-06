@@ -12,7 +12,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/quizzes/${id}`, {
+        const response = await axios.get(`https://quizmaker-nu.vercel.app/api/quizzes/${id}`, {
           headers: {
             Authorization: localStorage.getItem('token'), // Assuming token is stored in localStorage
           },
@@ -46,7 +46,7 @@ const Quiz = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5000/api/quizzes/${id}/submit`, { answers }, {
+      await axios.post(`https://quizmaker-nu.vercel.app/api/quizzes/${id}/submit`, { answers }, {
         headers: {
           Authorization: localStorage.getItem('token'), // Assuming token is stored in localStorage
         },

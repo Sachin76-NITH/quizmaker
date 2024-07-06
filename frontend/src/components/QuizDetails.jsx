@@ -13,7 +13,7 @@ const QuizDetails = () => {
     const fetchQuiz = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/api/quizzes/${quizId}`, {
+        const response = await axios.get(`https://quizmaker-nu.vercel.app/api/quizzes/${quizId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -40,7 +40,7 @@ const QuizDetails = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        `http://localhost:5000/api/quizzes/${quizId}/submit`,
+        `https://quizmaker-nu.vercel.app/api/quizzes/${quizId}/submit`,
         { answers },
         {
           headers: {

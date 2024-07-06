@@ -10,7 +10,7 @@ const QuizTaking = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/quizzes/${quizId}`);
+        const response = await axios.get(`https://quizmaker-nu.vercel.app/api/quizzes/${quizId}`);
         setQuiz(response.data);
         // Initialize answers array with default values (e.g., -1 for unanswered)
         setAnswers(new Array(response.data.questions.length).fill(-1));
@@ -32,7 +32,7 @@ const QuizTaking = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        `http://localhost:5000/api/quizzes/${quizId}/submit`,
+        `https://quizmaker-nu.vercel.app/api/quizzes/${quizId}/submit`,
         { answers },
         {
           headers: {
