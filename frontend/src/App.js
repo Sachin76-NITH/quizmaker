@@ -12,6 +12,7 @@ import AuthForm from './components/AuthForm'; // Renamed from Auth.jsx
 import './App.css';
 import Dashboard from './Dashboard';
 import QuizDetails from './components/QuizDetails';
+import Logout from './components/Logout'
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <Route path="/quizzes" element={<QuizList />} />
           <Route path="/create-quiz" element={<QuizForm />} />
           <Route path="/quiz/:quizId" element={<Quiz />} />
-          
+          <Route path='/logout' element ={<Logout/>}/>
           <Route path="/quizzes/:quizId" element={<QuizDetails />} />
         </Routes>
       
