@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 
 // Middleware
-app.use(bodyParser.json());
+
 app.use(express.json());
 app.use(cors({
     origin: 'https://quizmaker-sachin.vercel.app/', // replace with your frontend domain
